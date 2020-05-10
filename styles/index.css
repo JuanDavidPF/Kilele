@@ -121,7 +121,7 @@ header > div:nth-child(1) {
 }
 
 main {
-  background-image: url("./data/img/backgroundCover1.png");
+  background-image: url("../data/img/backgroundCover1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
