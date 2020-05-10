@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Avernir";
 
-  src: url("/data/fonts/Avenir-Medium/AvenirLTStd-Medium.eot");
-  src: url("/data/fonts/Avenir-Medium/AvenirLTStd-Medium.eot?#iefix")
+  src: url("../data/fonts/Avenir-Medium/AvenirLTStd-Medium.eot");
+  src: url("../data/fonts/Avenir-Medium/AvenirLTStd-Medium.eot?#iefix")
       format("embedded-opentype"),
-    url("/data/fonts/Avenir-Medium/AvenirLTStd-Medium.woff") format("woff"),
-    url("/data/fonts/Avenir-Medium/AvenirLTStd-Medium.ttf") format("truetype"),
-    url("/data/fonts/Avenir-Medium/AvenirLTStd-Medium.svg#svgFontName")
+    url("../data/fonts/Avenir-Medium/AvenirLTStd-Medium.woff") format("woff"),
+    url("../data/fonts/Avenir-Medium/AvenirLTStd-Medium.ttf") format("truetype"),
+    url("../data/fonts/Avenir-Medium/AvenirLTStd-Medium.svg#svgFontName")
       format("svg");
   font-weight: normal;
   font-style: normal;
@@ -15,12 +15,12 @@
 @font-face {
   font-family: "Avernir";
 
-  src: url("/data/fonts/Avenir-Light/AvenirLTStd-Light.eot");
-  src: url("/data/fonts/Avenir-Light/AvenirLTStd-Light.eot?#iefix")
+  src: url("../data/fonts/Avenir-Light/AvenirLTStd-Light.eot");
+  src: url("../data/fonts/Avenir-Light/AvenirLTStd-Light.eot?#iefix")
       format("embedded-opentype"),
-    url("/data/fonts/Avenir-Light/AvenirLTStd-Light.woff") format("woff"),
-    url("/data/fonts/Avenir-Light/AvenirLTStd-Light.ttf") format("truetype"),
-    url("/data/fonts/Avenir-Light/AvenirLTStd-Light.svg#svgFontName")
+    url("../data/fonts/Avenir-Light/AvenirLTStd-Light.woff") format("woff"),
+    url("../data/fonts/Avenir-Light/AvenirLTStd-Light.ttf") format("truetype"),
+    url("../data/fonts/Avenir-Light/AvenirLTStd-Light.svg#svgFontName")
       format("svg");
   font-weight: lighter;
   font-style: normal;
@@ -29,12 +29,12 @@
 @font-face {
   font-family: "AvernirRoman";
 
-  src: url("/data/fonts/Avenir-Roman/AvenirLTStd-Roman.eot");
-  src: url("/data/fonts/Avenir-Roman/AvenirLTStd-Roman.eot?#iefix")
+  src: url("../data/fonts/Avenir-Roman/AvenirLTStd-Roman.eot");
+  src: url("../data/fonts/Avenir-Roman/AvenirLTStd-Roman.eot?#iefix")
       format("embedded-opentype"),
-    url("/data/fonts/Avenir-Roman/AvenirLTStd-Roman.woff") format("woff"),
-    url("/data/fonts/Avenir-Roman/AvenirLTStd-Roman.ttf") format("truetype"),
-    url("/data/fonts/Avenir-Roman/AvenirLTStd-Roman.svg#svgFontName")
+    url("../data/fonts/Avenir-Roman/AvenirLTStd-Roman.woff") format("woff"),
+    url("../data/fonts/Avenir-Roman/AvenirLTStd-Roman.ttf") format("truetype"),
+    url("../data/fonts/Avenir-Roman/AvenirLTStd-Roman.svg#svgFontName")
       format("svg");
   font-style: normal;
   font-weight: normal;
