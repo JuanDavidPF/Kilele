@@ -37,7 +37,7 @@
 
     <main>
       <div class="content">
-        <img src="./data/img/leftArrow.png" alt="" />
+        <img src="./data/img/leftArrow.png" class="arrows" />
         <div>
           <h1>Únete al</h1>
 
@@ -51,10 +51,17 @@
             Empieza a disfrutar del café como nunca antes lo habías hecho.
           </h1>
         </div>
-        <img src="./data/img/rightArrow.png" alt="" srcset="" />
+        <img src="./data/img/rightArrow.png" class="arrows" />
       </div>
 
-      <div class="bulletPoints"></div>
+      <div class="bulletPoints">
+        <label class="bullets">
+          <input type="radio" name="slideShowed" class="bulletInput" />
+          <span class="bullet" id="firstBullet"></span>
+        </label>
+      </div>
     </main>
+
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
