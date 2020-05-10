@@ -350,3 +350,9 @@ main {
     height: auto;
   }
 }
+
+@media (max-height: 400px) {
+  main {
+    height: 400px;
+  }
+}
