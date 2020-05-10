@@ -172,7 +172,7 @@ main {
   transition-duration: 0.5s;
   transition-property: background-image;
   background-blend-mode: darken;
-  height: 91.95%;
+
   width: 100%;
 }
 

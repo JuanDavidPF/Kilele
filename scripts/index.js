@@ -13,8 +13,13 @@ let transisionThread = setInterval(
 );
 
 var smallWindow = window.matchMedia("(max-width: 800px)");
+var smallHeight = window.matchMedia("(max-height: 400px)");
 var hamburguerToggle = false;
 var hamburguerBtn = document.querySelector(".hamburgerButton");
+let header = document.querySelector("header");
+let links = document.querySelector(".headerLinks");
+let account = document.querySelector(".accountManagement");
+let isHamburgerMoving = false;
 
 let isBackgroundChanging = false;
 
@@ -47,6 +52,11 @@ if (amountOfBackgrounds)
 
 //modifies the transition duration
 main.style.transitionDuration = transitionDuration + "s";
+
+//sets the size to be fullscreen
+
+main.style.height = window.innerHeight - header.offsetHeight + "px";
+if (smallHeight.matches) main.style.height = "400px";
 
 //changes background images with the arrow
 for (let index = 0; index < arrows.length; index++) {
@@ -120,11 +130,6 @@ function changeBackground(backgroundIndex) {
 
 //hamburguer menu logic
 
-let header = document.querySelector("header");
-let links = document.querySelector(".headerLinks");
-let account = document.querySelector(".accountManagement");
-let isHamburgerMoving = false;
-
 if (smallWindow.matches) {
   hamburguerBtn.style.display = "block";
 } else {
@@ -155,6 +160,10 @@ window.addEventListener("resize", function () {
     account.style.opacity = "1";
     header.style.height = "75px";
   }
+
+  //full screen size
+  main.style.height = window.innerHeight - header.offsetHeight + "px";
+  if (smallHeight.matches) main.style.height = "400px";
 });
 
 hamburguerBtn.addEventListener("click", function () {
