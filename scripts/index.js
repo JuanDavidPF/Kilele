@@ -13,7 +13,8 @@ let transisionThread = setInterval(
 );
 
 var smallWindow = window.matchMedia("(max-width: 800px)");
-var smallHeight = window.matchMedia("(max-height: 400px)");
+var smallHeight = window.matchMedia("(max-height: 650px)");
+
 var hamburguerToggle = false;
 var hamburguerBtn = document.querySelector(".hamburgerButton");
 let header = document.querySelector("header");
@@ -56,7 +57,7 @@ main.style.transitionDuration = transitionDuration + "s";
 //sets the size to be fullscreen
 
 main.style.height = window.innerHeight - header.offsetHeight + "px";
-if (smallHeight.matches) main.style.height = "400px";
+if (smallHeight.matches) main.style.height = "650px";
 
 //changes background images with the arrow
 for (let index = 0; index < arrows.length; index++) {
@@ -162,8 +163,9 @@ window.addEventListener("resize", function () {
   }
 
   //full screen size
+
   main.style.height = window.innerHeight - header.offsetHeight + "px";
-  if (smallHeight.matches) main.style.height = "400px";
+  if (smallHeight.matches) main.style.height = "650px";
 });
 
 hamburguerBtn.addEventListener("click", function () {
@@ -176,6 +178,7 @@ hamburguerBtn.addEventListener("click", function () {
       links.style.display = "flex";
       account.style.display = "flex";
       header.style.height = "300px";
+
       setTimeout(() => {
         links.style.opacity = "1";
         account.style.opacity = "1";
@@ -189,6 +192,7 @@ hamburguerBtn.addEventListener("click", function () {
       account.style.opacity = "0";
 
       header.style.height = "75px";
+
       setTimeout(() => {
         links.style.display = "none";
         account.style.display = "none";
