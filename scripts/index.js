@@ -20,7 +20,7 @@ if (amountOfBackgrounds <= 1) {
 
 //adds the background images to the array
 for (let index = 0; index < amountOfBackgrounds; index++) {
-  backgrounds.push("../data/img/backgroundCover" + (index + 1) + ".png");
+  backgrounds.push("/data/img/backgroundCover" + (index + 1) + ".png");
 
   //instantiates more bullet points depending of the amount of backgrounds
   if (index > 0) {
