@@ -7,6 +7,11 @@ let backgroundActual = 0;
 let amountOfBackgrounds = 3;
 let transitionDuration = 0.5;
 let automaticTransitionDuration = 4;
+let transisionThread = setInterval(
+  AutoTransision,
+  automaticTransitionDuration * 1000
+);
+
 let isBackgroundChanging = false;
 
 //if there is no slides to the background, deactivates the background transition controls
@@ -20,7 +25,7 @@ if (amountOfBackgrounds <= 1) {
 
 //adds the background images to the array
 for (let index = 0; index < amountOfBackgrounds; index++) {
-  backgrounds.push("./data/img/backgroundCover" + (index + 1) + ".png");
+  backgrounds.push("./data/img/backgroundCover" + (index + 1) + ".jpg");
 
   //instantiates more bullet points depending of the amount of backgrounds
   if (index > 0) {
@@ -68,6 +73,7 @@ for (let index = 0; index < arrows.length; index++) {
 
 for (let index = 0; index < bullets.length; index++) {
   bullets[index].addEventListener("click", function () {
+    clearInterval(autoTransision);
     if (isBackgroundChanging == false) {
       isBackgroundChanging = true;
 
@@ -81,7 +87,7 @@ for (let index = 0; index < bullets.length; index++) {
 }
 
 //change the background automatically if the player doesnt interact
-setInterval(() => {
+function AutoTransision() {
   if (!isBackgroundChanging) {
     isBackgroundChanging = true;
 
@@ -93,12 +99,18 @@ setInterval(() => {
       isBackgroundChanging = false;
     }, transitionDuration * 1000);
   }
-}, automaticTransitionDuration * 1000);
+}
 
 //modifies the background to the html element and updates the active bulletpoint
 function changeBackground(backgroundIndex) {
   if (amountOfBackgrounds > 0) {
     main.style.backgroundImage = "url('" + backgrounds[backgroundIndex] + "')";
     bullets[backgroundIndex].checked = true;
+
+    clearInterval(transisionThread);
+    transisionThread = setInterval(
+      AutoTransision,
+      automaticTransitionDuration * 1000
+    );
   }
 }
