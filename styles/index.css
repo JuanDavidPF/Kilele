@@ -51,6 +51,41 @@ body {
   transition-duration: 0.25s;
   transition-timing-function: ease-in-out;
   margin: 0;
+  border-style: hidden;
+  user-select: none;
+}
+
+.hamburgerButton {
+  margin-right: 5%;
+  display: none;
+  position: absolute;
+  margin-left: 85%;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px 0;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: rotate(-45deg) translate(-8px, 4px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -3px);
 }
 
 header {
@@ -74,6 +109,7 @@ header > div:nth-child(1) {
 
 .logo {
   height: 60%;
+  margin-right: 20px;
 }
 
 .headerLinks {
@@ -89,8 +125,12 @@ header > div:nth-child(1) {
   font-weight: normal;
   font-size: 16px;
   text-align: center;
+  color: #dfdfdf;
+}
 
+.headerLinks > a:hover {
   color: white;
+  font-weight: 900;
 }
 
 .accountManagement {
@@ -98,6 +138,7 @@ header > div:nth-child(1) {
 }
 
 .accountManagement > h2 {
+  cursor: pointer;
   font-size: 14px;
   border-radius: 20px;
   width: 100px;
@@ -125,14 +166,13 @@ header > div:nth-child(1) {
 main {
   display: flex;
   flex-direction: column;
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   transition-duration: 0.5s;
   transition-property: background-image;
   background-blend-mode: darken;
-  height: 91.9%;
+  height: 91.95%;
   width: 100%;
 }
 
@@ -187,12 +227,6 @@ main {
   font-size: 114px;
 }
 
-/*
-//////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////
-*/
 .bulletPoints {
   display: flex;
   justify-content: center;
@@ -228,4 +262,91 @@ main {
   transition-property: background-color, box-shadow;
   box-shadow: 0 0 0 2px #ffffff;
   background-color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  .headerLinks {
+    width: 100%;
+  }
+  .content > div > h1:nth-child(1) {
+    font-size: 30px;
+  }
+
+  .content > div > h1:nth-child(3) {
+    font-size: 20px;
+  }
+
+  .content > div > div > h1:nth-child(1),
+  .content > div > div > h1:nth-child(3) {
+    font-family: "Amatic SC", cursive;
+    font-size: 80px;
+  }
+
+  .content > div > div > h1:nth-child(2) {
+    font-family: "Dancing Script", cursive;
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .content > div > h1:nth-child(1) {
+    font-size: 24px;
+  }
+
+  .content > div > h1:nth-child(3) {
+    font-size: 16px;
+  }
+
+  .content > div > div {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    line-height: 54px;
+  }
+
+  .content > div > div > h1:nth-child(1),
+  .content > div > div > h1:nth-child(3) {
+    font-family: "Amatic SC", cursive;
+    font-size: 65px;
+    text-align: center;
+  }
+
+  .content > div > div > h1:nth-child(2) {
+    font-family: "Dancing Script", cursive;
+    font-size: 65px;
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    height: 75px;
+    align-content: space-around;
+  }
+
+  .logo {
+    height: 40px;
+    margin: 0;
+  }
+  header > div:nth-child(1) {
+    flex-direction: column;
+    height: 60%;
+    justify-content: space-around;
+  }
+
+  .headerLinks {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    width: auto;
+  }
+  .headerLinks > a {
+    margin-top: 10px;
+    width: auto;
+  }
+
+  .accountManagement {
+    display: none;
+    opacity: 0;
+    height: auto;
+  }
 }
