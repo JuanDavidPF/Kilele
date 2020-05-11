@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "Avernir";
+
+  src: url("../data/fonts/Avenir-Medium/AvenirLTStd-Medium.eot");
+  src: url("../data/fonts/Avenir-Medium/AvenirLTStd-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../data/fonts/Avenir-Medium/AvenirLTStd-Medium.woff") format("woff"),
+    url("../data/fonts/Avenir-Medium/AvenirLTStd-Medium.ttf") format("truetype"),
+    url("../data/fonts/Avenir-Medium/AvenirLTStd-Medium.svg#svgFontName")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvernirRoman";
+
+  src: url("../data/fonts/Avenir-Roman/AvenirLTStd-Roman.eot");
+  src: url("../data/fonts/Avenir-Roman/AvenirLTStd-Roman.eot?#iefix")
+      format("embedded-opentype"),
+    url("../data/fonts/Avenir-Roman/AvenirLTStd-Roman.woff") format("woff"),
+    url("../data/fonts/Avenir-Roman/AvenirLTStd-Roman.ttf") format("truetype"),
+    url("../data/fonts/Avenir-Roman/AvenirLTStd-Roman.svg#svgFontName")
+      format("svg");
+  font-style: normal;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hamburgerButton {
+  margin-right: 5%;
+  display: none;
+  position: absolute;
+  margin-left: 85%;
+  margin-top: 25px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px 0;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-8px, 4px);
+  -ms-transform: rotate(-45deg) translate(-8px, 4px);
+  transform: rotate(-45deg) translate(-8px, 4px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -3px);
+  -ms-transform: rotate(45deg) translate(-8px, -3px);
+  transform: rotate(45deg) translate(-8px, -3px);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: 75px;
+  width: 100%;
+  background-color: #9b2e49;
+}
+
+header > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+header > div > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+header > div:nth-child(1) {
+  width: 70%;
+}
+
+.logo {
+  cursor: pointer;
+  height: 60%;
+  margin-right: 20px;
+}
+
+.headerLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.headerLinks > a {
+  text-decoration: none;
+  font-family: "AvernirRoman";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  color: #dfdfdf;
+}
+
+.headerLinks > a:hover {
+  color: white;
+  font-weight: 900;
+}
+
+.accountManagement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.accountManagement > div {
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 20px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+
+  margin-left: 10px;
+  font-family: "Avernir";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.accountManagement > div > a {
+  text-decoration: none;
+}
+
+.accountManagement > div:nth-child(1) {
+  color: white;
+  border-style: solid;
+}
+
+.accountManagement > div:nth-child(1) > a {
+  color: white;
+}
+
+.accountManagement > div:nth-child(2) {
+  background-color: white;
+  border-color: white;
+  border-style: solid;
+}
+.accountManagement > div:nth-child(2) > a {
+  color: black;
+}
+
+@media (max-width: 1200px) {
+  .headerLinks {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 75px;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+  }
+
+  .logo {
+    height: 40px;
+    margin: 0;
+  }
+  header > div:nth-child(1) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 60%;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .headerLinks {
+    display: none;
+    opacity: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: auto;
+  }
+  .headerLinks > a {
+    margin-top: 10px;
+    width: auto;
+  }
+
+  .accountManagement {
+    display: none;
+    opacity: 0;
+    height: auto;
+  }
+}
