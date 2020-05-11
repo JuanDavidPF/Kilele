@@ -45,9 +45,11 @@ hamburguerBtn.addEventListener("click", function () {
     if (hamburguerToggle) {
       links.style.display = "flex";
       account.style.display = "flex";
-      header.style.height = "300px";
 
       setTimeout(() => {
+        links.style.height = "auto";
+        account.style.height = "auto";
+        header.style.height = "300px";
         links.style.opacity = "1";
         account.style.opacity = "1";
       }, 1);
@@ -58,6 +60,8 @@ hamburguerBtn.addEventListener("click", function () {
     } else {
       links.style.opacity = "0";
       account.style.opacity = "0";
+      links.style.height = "0";
+      account.style.height = "0";
 
       header.style.height = "75px";
 
@@ -68,7 +72,6 @@ hamburguerBtn.addEventListener("click", function () {
       }, 250);
     }
     // fix full screen size
-
     changeMainSize();
   }
 });

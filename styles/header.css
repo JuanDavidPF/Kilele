@@ -200,7 +200,9 @@ header > div:nth-child(1) {
     height: 40px;
     margin: 0;
   }
+
   header > div:nth-child(1) {
+    width: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -213,11 +215,11 @@ header > div:nth-child(1) {
   .headerLinks {
     display: none;
     opacity: 0;
+    height: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: auto;
   }
   .headerLinks > a {
     margin-top: 10px;
@@ -225,8 +227,8 @@ header > div:nth-child(1) {
   }
 
   .accountManagement {
-    display: none;
     opacity: 0;
-    height: auto;
+    height: 0;
+    display: none;
   }
 }

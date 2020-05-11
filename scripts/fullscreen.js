@@ -23,8 +23,8 @@ function changeMainSize() {
     //full screen size
     main.style.height = window.innerHeight - header.offsetHeight + "px";
     if (smallHeight.matches) main.style.height = "650px";
-    console.log("AAA");
-  }, 17);
+    console.log(header.offsetHeight);
+  }, 16);
 
   //stops interval from running
   setTimeout(function () {
@@ -32,5 +32,5 @@ function changeMainSize() {
     main.style.height = window.innerHeight - header.offsetHeight + "px";
     if (smallHeight.matches) main.style.height = "650px";
     clearInterval(fixScreen);
-  }, 251);
+  }, 250);
 }
