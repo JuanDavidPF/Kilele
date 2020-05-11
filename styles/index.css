@@ -89,6 +89,11 @@ main {
   transition-property: background-image;
   background-blend-mode: darken;
 
+  /* Force the browser to load the images at first*/
+  background-image: url("./../data/img/backgroundCover1.jpg");
+  background-image: url("./../data/img/backgroundCover2.jpg");
+  background-image: url("./../data/img/backgroundCover3.jpg");
+
   width: 100%;
 }
 
