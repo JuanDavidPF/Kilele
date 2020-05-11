@@ -14,10 +14,76 @@
 
     <link rel="stylesheet" href="./../styles/registro.css" />
   </head>
-  <body>
-    <section>
+
+  <body class="animate__animated animate__fadeIn">
+    <section class="animate__animated animate__slideInLeft">
       <img src="./../data/img/logo.png" class="logo" />
     </section>
-    <section></section>
+    <section class="animate__animated animate__slideInRight">
+      <h1>Registro</h1>
+
+      <div class="account">
+        <input type="text" placeholder="Nombre completo" />
+        <input type="email" placeholder="Correo electrónico" />
+        <input type="password" placeholder="Contraseña" />
+        <input type="password" placeholder="Confirmar contraseña" />
+      </div>
+
+      <div class="birthday">
+        <h2>Fecha de nacimiento</h2>
+
+        <div class="date">
+          <input
+            type="number"
+            placeholder="Dia:"
+            min="1"
+            max="31"
+            maxlength="2"
+            oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          />
+
+          <input type="text" placeholder="Mes" list="month" />
+          <datalist id="month">
+            <option value="Enero"> </option>
+            <option value="Febrero"> </option>
+            <option value="Marzo"> </option>
+            <option value="Abril"> </option>
+            <option value="Mayo"> </option>
+            <option value="Junio"> </option>
+            <option value="Julio"> </option>
+            <option value="Agosto"> </option>
+            <option value="Septiembre"> </option>
+            <option value="Octubre"> </option>
+            <option value="Noviembre"> </option>
+            <option value="Diciembre"> </option>
+          </datalist>
+
+          <input
+            type="number"
+            placeholder="Año:"
+            min="1900"
+            max="2020"
+            maxlength="4"
+            oninput="javascript: if (this.value> this.max) this.value = this.value.slice(0, this.value.length-1);
+        if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          />
+        </div>
+      </div>
+
+      <div class="submit">
+        <p>
+          Al hacer click en Registrarse, aceptas los
+          <a href="">términos y condiciones</a> y la
+          <a href="">política de privacidad de Kilele.</a>
+        </p>
+
+        <div class="btn"><a href=""> Registrarse</a></div>
+
+        <p>
+          ¿Ya tienes una cuenta?
+          <a href="./iniciar.html">Inicia sesión</a>
+        </p>
+      </div>
+    </section>
   </body>
 </html>
