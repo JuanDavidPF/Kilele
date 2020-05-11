@@ -68,11 +68,7 @@ hamburguerBtn.addEventListener("click", function () {
       }, 250);
     }
     // fix full screen size
-    main.style.height = window.innerHeight - header.offsetHeight + "px";
-    if (smallHeight.matches) main.style.height = "650px";
-    setTimeout(function () {
-      main.style.height = window.innerHeight - header.offsetHeight + "px";
-      if (smallHeight.matches) main.style.height = "650px";
-    }, 250);
+
+    changeMainSize();
   }
 });
