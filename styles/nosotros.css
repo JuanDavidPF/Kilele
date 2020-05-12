@@ -88,6 +88,7 @@ main {
   align-content: center;
   background-color: #fcf2e6;
   background-repeat: no-repeat;
+  transition-duration: 0s;
   background-size: cover;
   background-position: center center;
   background-image: url("./../data/img/nosotrosBackground.png");
@@ -150,5 +151,3 @@ main > div > img {
     width: 75px;
   }
 }
-
-

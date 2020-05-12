@@ -275,9 +275,3 @@ main {
     text-align: center;
   }
 }
-
-@media (max-height: 400px) {
-  main {
-    height: 400px;
-  }
-}
