@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: "Avernir";
 
@@ -88,7 +95,9 @@ main {
   align-content: center;
   background-color: #fcf2e6;
   background-repeat: no-repeat;
-  transition-duration: 0s;
+  -webkit-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
   background-size: cover;
   background-position: center center;
   background-image: url("./../data/img/nosotrosBackground.png");

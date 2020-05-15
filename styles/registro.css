@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: "Avernir";
 
@@ -68,8 +75,13 @@ input:focus {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 body > section {
@@ -95,10 +107,18 @@ body > section:nth-child(2) {
   background-size: cover;
   background-position: center center;
   background-image: url("./../data/img/textureBackground.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body > section:nth-child(2) > h1 {
@@ -108,9 +128,15 @@ body > section:nth-child(2) > h1 {
   font-size: 26px;
 }
 .account {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 
   height: 250px;
   width: 60%;
@@ -129,9 +155,16 @@ body > section:nth-child(2) > h1 {
 }
 
 .birthday {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 60%;
 }
 
@@ -144,10 +177,17 @@ body > section:nth-child(2) > h1 {
 }
 
 .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .date > input {
@@ -170,16 +210,43 @@ body > section:nth-child(2) > h1 {
   width: 75px;
 }
 
+.date > input::-webkit-input-placeholder {
+  color: #ada8a8;
+}
+
+.date > input::-moz-placeholder {
+  color: #ada8a8;
+}
+
+.date > input:-ms-input-placeholder {
+  color: #ada8a8;
+}
+
+.date > input::-ms-input-placeholder {
+  color: #ada8a8;
+}
+
 .date > input::placeholder {
   color: #ada8a8;
 }
 
 .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+
+      -ms-flex-pack: justify;
+
+          justify-content: space-between;
   width: 60%;
 }
 
@@ -197,9 +264,15 @@ body > section:nth-child(2) > h1 {
 }
 
 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   width: 185px;
   height: 45px;

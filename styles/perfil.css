@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: "Avernir";
 
@@ -63,13 +70,22 @@ body {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 body > section:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: white;
   width: 100%;
   background-repeat: no-repeat;
@@ -79,13 +95,21 @@ body > section:nth-child(3) {
 }
 
 .profileData {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 86px;
   width: 80%;
   height: 425px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .profileData:nth-child(2) {
@@ -94,6 +118,8 @@ body > section:nth-child(3) {
 }
 .profileData > h1 {
   font-family: "AvernirLight";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   font-size: 24px;
@@ -103,6 +129,8 @@ body > section:nth-child(3) {
 .profileData > h2 {
   color: #676666;
   font-family: "AvernirLight";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   font-size: 22px;
@@ -110,34 +138,56 @@ body > section:nth-child(3) {
   border-bottom: 2px solid #676666;
 }
 .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .key {
   font-size: 20px;
   font-family: "AvernirLight";
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #676666;
   width: 50%;
   text-align: left;
-  align-self: flex-start;
-  justify-content: space-between;
-  align-items: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 150px;
 }
 
 .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 50%;
   color: #444444;
   font-family: "AvernirRoman";
   font-size: 20px;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   text-align: right;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   height: 150px;
 }
 
@@ -153,14 +203,22 @@ body > section:nth-child(3) {
 }
 .data:nth-child(2) .value {
   height: auto;
-  align-self: end;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
   width: auto;
 }
 
 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   width: 185px;
   height: 45px;
@@ -178,6 +236,8 @@ body > section:nth-child(3) {
 }
 
 .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
