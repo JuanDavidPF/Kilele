@@ -178,6 +178,22 @@ header > div:nth-child(1) {
 .accountManagement > div:nth-child(2) > a {
   color: black;
 }
+.accountManagement > a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Avernir";
+  font-style: normal;
+  font-weight: normal;
+}
+.accountManagement > a > img {
+  width: 40px;
+}
+
+.accountManagement > a > p {
+  margin-top: 5px;
+  margin-left: 12px;
+}
 
 @media (max-width: 1200px) {
   .headerLinks {

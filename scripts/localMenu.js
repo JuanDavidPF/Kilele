@@ -1,9 +1,16 @@
-var smallWindow = window.matchMedia("(max-width: 900px)");
-var menu = document.querySelector("body>section");
+var smallWindow = window.matchMedia("(max-width: 800px)");
+var menu = document.querySelector(".localMenu");
 var btn = document.querySelector(".menuBtn");
 var menuOpened = true;
 var menuOpening = false;
 var olderWidth = window.innerWidth;
+store = window.location.href.includes("tienda");
+let mainContent;
+
+if (store) {
+  mainContent = document.querySelector(".mainContent");
+  menu.style.height = mainContent.offsetHeight + "px";
+}
 
 btn.style.left = menu.offsetWidth + "px";
 
@@ -13,6 +20,7 @@ window.addEventListener("resize", function () {
     if (smallWindow.matches && menuOpened) {
       menuOpened = false;
       menu.classList.add("animate__slideOutLeft");
+
       btn.style.transitionDuration = "0s";
       btn.style.left = "200px";
       btn.style.transform = "translate(-50%) rotate(0deg)";
@@ -51,3 +59,13 @@ btn.addEventListener("click", function () {
     }, 1000);
   }
 });
+
+setInterval(function () {
+  if (store) {
+    menu.style.height = mainContent.offsetHeight + "px";
+
+    if (window.innerHeight < mainContent.offsetHeight) {
+      mainContent.style.height = "100%";
+    }
+  }
+}, 17);
